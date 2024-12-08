@@ -1,101 +1,155 @@
-import Image from "next/image";
+import { ProductCard } from '@/components/ui/ProductsCard';
+import { CategoryCard } from '@/components/ui/CategoryCard';
+import { FeaturedPost } from '@/components/FeaturedPosts';
+import Image from 'next/image';
+import { ProductShowcase } from '@/components/ProductsShowcase';
+import AnotherProductShowCase from '@/components/AnotherProductShowCase';
+import Footer from '@/components/Footer';
+import SummerCollection from '@/components/HeroOne';
+
+const products = [
+  {
+    image:"/featured/1.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/2.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/3.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/4.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/5.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/6.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/7.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  },
+  {
+    image:"/featured/8.png",
+    title: "Graphic Design",
+    department: "English Department",
+    price: { original: "$16.48", discounted: "$6.48" },
+    colors: ["sky-500", "teal-700", "orange-400", "slate-800"],
+  }
+];
+
+const categories = [
+  { image: "menpng.png", category: "MEN" },
+  { image: "womenpng.png", category: "WOMEN" },
+  { image: "accessories.png", category: "ACCESSORIES" },
+  { image: "kids.png", category: "KIDS" },
+  
+];
+
+const featuredPosts = [
+  {
+    image: "/posts/1.png",
+    date: "22 April 2021",
+    comments: 10,
+    title: "Loudest à la Madison #1 (L'integral)",
+    description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+  },
+  {
+    image: "/posts/2.png",
+    date: "22 April 2021",
+    comments: 10,
+    title: "Loudest à la Madison #1 (L'integral)",
+    description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+  },
+  {
+    image: "/posts/3.png",
+    date: "22 April 2021",
+    comments: 10,
+    title: "Loudest à la Madison #1 (L'integral)",
+    description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+  }
+];
+
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex overflow-hidden flex-col bg-white">
+      <div className="flex overflow-hidden flex-col pb-28 w-full font-bold tracking-normal text-white bg-neutral-50 max-md:pb-24 max-md:max-w-full">
+      <SummerCollection/>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="flex overflow-hidden flex-col items-center px-20 w-full bg-neutral-50 max-md:px-5 max-md:max-w-full">
+        <div className='text-center'>
+          <h1 className='font-bold text-3xl '>Editor's pick</h1>
+          <p className='text-[#737373]'>Problems trying to resolve the conflict between </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex overflow-hidden items-center py-20 max-md:flex-wrap gap-4 lg:flex-row md:flex-row sm:flex-col flex-col">
+  <div className="flex flex-1 gap-4 lg:flex-row md:flex-row sm:flex-col flex-col">
+    {categories.slice(0, 2).map((category, index) => (
+      <CategoryCard  key={index} {...category} />
+    ))}
+  </div>
+
+  <div className="flex flex-col gap-4">
+    {categories.slice(2).map((category, index) => (
+      <CategoryCard key={index} {...category} />
+    ))}
+  </div>
+</div>
+      </div>
+
+      <div className="flex overflow-hidden justify-center items-end px-20 w-full bg-white max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-wrap gap-8 justify-center">
+          {products.map((product, index) => (
+            <ProductCard key={index} {...product} />
+          ))}
+        </div>
+      </div>
+      <ProductShowcase/>
+      <AnotherProductShowCase/>
+      <div className="flex overflow-hidden flex-col justify-center items-center px-20 w-full tracking-wide bg-white max-md:px-5 max-md:max-w-full">
+        <div className='w-full text-center py-20 flex flex-col gap-5'>
+          <p className='text-[#23A6F0] font-semibold'>Practice advice</p>
+          <h1 className='text-5xl font-bold tracking-tighter'>Featured Products</h1>
+          <p className='max-w-[28rem] mx-auto'>Problems trying to resolve the conflict between 
+          the two major realms of Classical physics: Newtonian mechanics </p>
+        </div>
+        <div className="flex flex-wrap gap-8 justify-center">
+          {featuredPosts.map((post, index) => (
+            <FeaturedPost key={index} {...post} />
+          ))}
+        </div>
+      </div>
+      <Footer/>
     </div>
   );
 }
