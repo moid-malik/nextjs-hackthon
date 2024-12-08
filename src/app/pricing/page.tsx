@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import * as React from "react";
 
 interface PricingTierProps {
@@ -207,9 +208,9 @@ function PricingPage() {
                   Simple Pricing
                 </h1>
                 <nav aria-label="Breadcrumb" className="flex overflow-hidden gap-4 items-center py-2.5 mt-4 text-sm leading-6 whitespace-nowrap">
-                  <a href="/" className="self-stretch my-auto text-slate-800">
+                  <Link href="/" className="self-stretch my-auto text-slate-800">
                     Home
-                  </a>
+                  </Link>
                   <img
                     loading="lazy"
                     src="/icons/grayarrow.svg"
@@ -305,7 +306,7 @@ function PricingPage() {
             </div>
           </div>
           <p className="mt-12 text-xl tracking-wide text-center text-neutral-500 max-md:mt-10 max-md:max-w-full">
-            Haven't got your answer? Contact our support
+            Haven{"'"}t got your answer? Contact our support
           </p>
         </div>
       </div>

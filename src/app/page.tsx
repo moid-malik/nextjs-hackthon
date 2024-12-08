@@ -108,7 +108,7 @@ export default function Home() {
 
       <div className="flex overflow-hidden flex-col items-center px-20 w-full bg-neutral-50 max-md:px-5 max-md:max-w-full">
         <div className='text-center'>
-          <h1 className='font-bold text-3xl '>Editor's pick</h1>
+          <h1 className='font-bold text-3xl '>Editor{"'"}s pick</h1>
           <p className='text-[#737373]'>Problems trying to resolve the conflict between </p>
         </div>
         <div className="flex overflow-hidden items-center py-20 max-md:flex-wrap gap-4 lg:flex-row md:flex-row sm:flex-col flex-col">

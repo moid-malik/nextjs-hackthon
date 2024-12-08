@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import * as React from "react";
 
 interface TeamMemberProps {
@@ -69,7 +70,7 @@ const TeamPage: React.FC = () => {
                   <div className="text-base tracking-normal text-neutral-500">WHAT WE DO</div>
                   <h1 className="mt-4 text-6xl leading-none text-slate-800 max-md:text-4xl">Innovation tailored for you</h1>
                   <nav className="flex overflow-hidden gap-4 items-center py-2.5 mt-4 text-sm leading-6 whitespace-nowrap" aria-label="Breadcrumb">
-                    <a href="/" className="self-stretch my-auto text-slate-800">Home</a>
+                    <Link href="/" className="self-stretch my-auto text-slate-800">Home</Link>
                     <img loading="lazy" src="/icons/grayarrow.svg" alt="" className="object-contain shrink-0 self-stretch my-auto aspect-[0.56] w-[9px]" />
                     <span className="self-stretch my-auto text-neutral-500">Team</span>
                   </nav>

@@ -1,11 +1,12 @@
 "use client";
 import { SocialLinksProps } from '@/types/types';
+import Link from 'next/link';
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
   return (
     <div className="flex overflow-hidden gap-5 justify-center items-center">
       {links.map((link, index) => (
-        <a
+        <Link
           key={index}
           href={link.url}
           className="flex items-center justify-center"
@@ -17,7 +18,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
             alt={link.alt}
             className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
           />
-        </a>
+        </Link>
       ))}
     </div>
   );

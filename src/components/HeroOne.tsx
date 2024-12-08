@@ -29,9 +29,6 @@ const CTAButton: React.FC<CTAButtonProps> = ({ text, }) => (
 );
 
 const SummerCollection: React.FC = () => {
-  const handleShopNow = () => {
-
-  };
 
   return (
     <div className="relative flex bg-[#01B5DA] overflow-hidden flex-col font-bold tracking-normal text-white">

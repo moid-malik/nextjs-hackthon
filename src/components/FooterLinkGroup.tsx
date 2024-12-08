@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { FooterLinkGroupProps } from '@/types/types';
+import Link from 'next/link';
 
 export const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({
   title,
@@ -12,14 +13,14 @@ export const FooterLinkGroup: React.FC<FooterLinkGroupProps> = ({
       <div className="text-base tracking-normal text-slate-800">{title}</div>
       <div className="flex flex-col self-start mt-5 text-sm tracking-wide leading-6 text-neutral-500">
         {links.map((link, index) => (
-          <a
+          <Link
             key={index}
             href="#"
             className={index > 0 ? 'mt-2.5' : ''}
             tabIndex={0}
           >
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
