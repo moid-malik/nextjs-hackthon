@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@next/env':
-        specifier: ^15.0.4
-        version: 15.0.4
       next:
         specifier: 15.0.4
         version: 15.0.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
