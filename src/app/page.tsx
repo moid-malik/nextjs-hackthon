@@ -1,7 +1,6 @@
 import { ProductCard } from '@/components/ui/ProductsCard';
 import { CategoryCard } from '@/components/ui/CategoryCard';
 import { FeaturedPost } from '@/components/FeaturedPosts';
-import Image from 'next/image';
 import { ProductShowcase } from '@/components/ProductsShowcase';
 import AnotherProductShowCase from '@/components/AnotherProductShowCase';
 import Footer from '@/components/Footer';
@@ -115,13 +114,13 @@ export default function Home() {
         <div className="flex overflow-hidden items-center py-20 max-md:flex-wrap gap-4 lg:flex-row md:flex-row sm:flex-col flex-col">
   <div className="flex flex-1 gap-4 lg:flex-row md:flex-row sm:flex-col flex-col">
     {categories.slice(0, 2).map((category, index) => (
-      <CategoryCard  key={index} {...category} />
+      <CategoryCard  title={''} itemCount={0} key={index} {...category} />
     ))}
   </div>
 
   <div className="flex flex-col gap-4">
     {categories.slice(2).map((category, index) => (
-      <CategoryCard key={index} {...category} />
+      <CategoryCard title={''} itemCount={0} key={index} {...category} />
     ))}
   </div>
 </div>

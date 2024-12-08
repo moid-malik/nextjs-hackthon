@@ -131,10 +131,10 @@ function ContactPage() {
             <div className="flex flex-col items-center max-w-full w-[607px]">
               <div className="flex overflow-hidden flex-col items-center">
                 <div className="text-base tracking-normal">
-                  WE Can't WAIT TO MEET YOU
+                  WE Can{`'`}t WAIT TO MEET YOU
                 </div>
                 <h2 className="mt-4 text-4xl sm:text-6xl leading-none">
-                  Let's Talk
+                  Let{"'"}s Talk
                 </h2>
                 <div className="flex gap-2.5 items-start mt-4 text-sm leading-loose text-white">
                   <button 

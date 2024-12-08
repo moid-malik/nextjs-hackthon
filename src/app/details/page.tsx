@@ -131,7 +131,7 @@ function ProductDetails() {
             </div>
           </div>
         </div>
-      </div>
+      </div>  
       <div className="flex mx-auto pl-8 overflow-hidden flex-col justify-end w-full bg-white max-md:max-w-full">
         <div className="w-full flex justify-between px-[28.8rem] text-[#737373] text-sm font-semibold">
                 <p>Description</p>

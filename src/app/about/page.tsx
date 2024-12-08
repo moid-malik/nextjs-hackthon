@@ -271,7 +271,7 @@ export default function AboutPage() {
                 <div className="flex overflow-hidden flex-col self-stretch my-auto min-w-[240px] w-[438px] ">
                   <div className="text-base tracking-normal      ">WORK WITH US</div>
                   <div className="mt-6  text-4xl leading-none ">
-                    Now Let's grow Yours
+                    Now Let{"'"}s grow Yours
                   </div>
                   <div className="mt-6 leading-5 ">
                     The gradual accumulation of information about atomic and
